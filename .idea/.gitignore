@@ -1,5 +1,43 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Environment-dependent path to Maven home directory
-/mavenHomeManager.xml
+# Gradle caches and build output
+../.gradle/
+build/
+out/
+bin/
+*.class
+
+# Local Minecraft development instances (mods, worlds, configs, logs)
+/run/
+/run-*/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / VS Code local project settings
+.classpath
+.project
+.settings/
+.vscode/
+
+# Logs and JVM crash reports
+*.log
+hs_err_pid*
+replay_pid*
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+/local.properties
+
+# OS and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Keep the Gradle wrapper and generated mod resources under src/generated tracked.

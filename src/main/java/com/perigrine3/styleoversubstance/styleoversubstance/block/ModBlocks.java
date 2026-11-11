@@ -1,5 +1,6 @@
 package com.perigrine3.styleoversubstance.styleoversubstance.block;
 
+import com.perigrine3.createcybernetics.block.EngineeringTableBlock;
 import com.perigrine3.styleoversubstance.styleoversubstance.Styleoversubstance;
 import com.perigrine3.styleoversubstance.styleoversubstance.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -16,9 +17,9 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Styleoversubstance.MODID);
 
-    //public static final DeferredBlock<Block> EXAMPLE_BLOCK = registerBlock("example_block",
-    //        () -> new Block(BlockBehaviour.Properties.of()
-    //                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)), true);
+    public static final DeferredBlock<Block> GARMENT_TABLE = registerBlock("garment_table",
+            () -> new GarmentTableBlock(BlockBehaviour.Properties.of().strength(6, 6)
+                    .noOcclusion().sound(SoundType.METAL)), true);
 
 
 
@@ -31,11 +32,9 @@ public class ModBlocks {
 
         return toReturn;
     }
-
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

@@ -17,9 +17,12 @@ license = "MIT"
 # The modid of the mod
 modId = "styleoversubstance" #mandatory
 # The version number of the mod
-version = "0.0.1" #mandatory
+version = "0.0.1b-neoforge-1.21.1-PRERELEASE2(EXCLUSIVE)" #mandatory
 # A display name for the mod
 displayName = "Cybernetics: Style Over Substance" #mandatory
+
+logoFile="styleoversubstance_icon.png" #optional
+
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforge.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -29,14 +32,14 @@ displayName = "Cybernetics: Style Over Substance" #mandatory
 # A text field displayed in the mod UI
 #credits="" #optional
 # A text field displayed in the mod UI
-authors = "" #optional
+authors = "Perigrine3" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description = ''''''
+description = '''An addon mod for Cybernetics! Adds Cyberpunk themed clothes that can interact with your cyberware! You'll have to balance both style and substance, and in Cyberpunk, style always comes out on top... '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 [[mixins]]
-config = "styleoversubstance.mixins.json"
+config="styleoversubstance.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
@@ -69,7 +72,7 @@ side="CLIENT"
 modId="createcybernetics"
 type="required"
 versionRange="[0.5.0,)"
-ordering="BEFORE"
+ordering="AFTER"
 side="BOTH"
 
 

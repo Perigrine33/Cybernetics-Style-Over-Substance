@@ -1,16 +1,13 @@
 package com.perigrine3.styleoversubstance.styleoversubstance.datagen;
 
+import com.perigrine3.styleoversubstance.styleoversubstance.block.ModBlocks;
 import com.perigrine3.styleoversubstance.styleoversubstance.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -25,27 +22,48 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //        ModBlocks.TITANIUMORE_BLOCK, ModBlocks.DEEPSLATE_TITANIUMORE_BLOCK);
 
 
-//SHAPED RECIPE
-        //ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TITANIUM_BLOCK.get())
-        //        .pattern("TTT")
-        //        .pattern("TTT")
-        //        .pattern("TTT")
-        //        .define('T', ModItems.TITANIUMINGOT.get())
-        //        .unlockedBy("has_titaniumingot", has(ModItems.TITANIUMINGOT))
-        //        .save(recipeOutput);
+//SHAPED RECIPES
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GARMENT_TABLE.get(), 4)
+                .pattern(" F ")
+                .pattern("FEF")
+                .pattern("SF ")
+                .define('E', com.perigrine3.createcybernetics.block.ModBlocks.ENGINEERING_TABLE.get())
+                .define('F', ModItems.BASIC_FABRIC)
+                .define('S', Items.SHEARS)
+                .unlockedBy("has_fabric", has(ModItems.BASIC_FABRIC))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BASIC_FABRIC.get(), 4)
+                .pattern("STT")
+                .define('T', Items.WHITE_WOOL)
+                .define('S', Items.STICK)
+                .unlockedBy("has_whitewool", has(Items.WHITE_WOOL))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LEATHER_FABRIC.get(), 4)
+                .pattern("STT")
+                .define('T', Items.LEATHER)
+                .define('S', Items.STICK)
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SYNTHWEAVE_FABRIC.get(), 4)
+                .pattern("STT")
+                .define('T', com.perigrine3.createcybernetics.item.ModItems.PLASTIC_SHEET)
+                .define('S', Items.STICK)
+                .unlockedBy("has_leather", has(Items.LEATHER))
+                .save(recipeOutput);
 
 
 //SHAPELESS RECIPE
-        //ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TITANIUMINGOT.get(), 9)
-        //        .requires(ModBlocks.TITANIUM_BLOCK.get())
-        //        .unlockedBy("has_titanium_block", has(ModBlocks.TITANIUM_BLOCK))
-        //        .save(recipeOutput, "createcybernetics:titaniumingot_from_titanium_block");
+        //ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.UNREFINED_POLYMER.get(), 3)
+        //        .requires(ModItems.TAR.get())
+        //        .requires(Items.SLIME_BALL)
+        //        .requires(Items.BONE_MEAL)
+        //        .unlockedBy("has_tar", has(ModItems.TAR.get()))
+        //        .save(recipeOutput);
 
 
 //SMELTING
-        //oreSmelting(recipeOutput, TITANIUM_SMELTABLES, RecipeCategory.MISC,
-        //        ModItems.TITANIUMINGOT.get(), 0.25f, 200, "titanium");
-
+        //oreSmelting(recipeOutput, List.of(Items.COAL, Items.CHARCOAL), RecipeCategory.MISC,
+        //        ModItems.TAR, 0.25f, 200, "tar_from_coal");
 
 //BLASTING
         //oreBlasting(recipeOutput, TITANIUM_SMELTABLES, RecipeCategory.MISC,

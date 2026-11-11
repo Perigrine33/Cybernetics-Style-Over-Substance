@@ -20,6 +20,9 @@ modId = "${mod_id}" #mandatory
 version = "${mod_version}" #mandatory
 # A display name for the mod
 displayName = "${mod_name}" #mandatory
+
+logoFile="styleoversubstance_icon.png" #optional
+
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforge.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -36,7 +39,7 @@ description = '''${mod_description}'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 [[mixins]]
-config = "${mod_id}.mixins.json"
+config="styleoversubstance.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
@@ -69,7 +72,7 @@ side="CLIENT"
 modId="createcybernetics"
 type="required"
 versionRange="[0.5.0,)"
-ordering="BEFORE"
+ordering="AFTER"
 side="BOTH"
 
 

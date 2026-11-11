@@ -105,7 +105,10 @@ batteryRepairAmount = 500
 #ANY_PLAYER_AUTO_APPROVE: Any player may upload tattoos, and uploads are immediately approved. Not recommended for public servers.
 #Allowed Values: SERVER_FILES_ONLY, OP_ONLY_AUTO_APPROVE, ANY_PLAYER_PENDING_APPROVAL, ANY_PLAYER_AUTO_APPROVE
 tattooUploadMode = "OP_ONLY_AUTO_APPROVE"
-#Cyberzombie spawn weight. Set to 0 to disable natural spawning.
+#Cyberzombie relative replacement weight against vanilla Zombies.
+#Vanilla Zombies use an effective baseline weight of 100.
+#A value of 10 gives Cyberzombies 10 shares against 100 vanilla Zombie shares.
+#Set to 0 to disable Zombie replacement.
 # Default: 10
 # Range: 0 ~ 1000
 cyberzombieSpawn = 10
@@ -117,7 +120,10 @@ cyberzombieMin = 1
 # Default: 3
 # Range: 1 ~ 100
 cyberzombieMax = 3
-#Cyberskeleton spawn weight. Set to 0 to disable natural spawning.
+#Cyberskeleton relative replacement weight against vanilla Skeletons.
+#Vanilla Skeletons use an effective baseline weight of 100.
+#A value of 10 gives Cyberskeletons 10 shares against 100 vanilla Skeleton shares.
+#Set to 0 to disable Skeleton replacement.
 # Default: 10
 # Range: 0 ~ 1000
 cyberskeletonSpawn = 10

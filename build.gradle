@@ -11,16 +11,29 @@ group = mod_group_id
 repositories {
     mavenLocal()
 
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "CurseMaven"
-                url = "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
+    maven {
+        name = "Create Maven"
+        url = "https://maven.createmod.net"
+    }
+
+    maven {
+        name = "Registrate Snapshots"
+        url = "https://maven.ithundxr.dev/snapshots"
+    }
+
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+    }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+
+    maven {
+        name = "C4's Maven"
+        url = "https://maven.theillusivec4.top/"
     }
 }
 
@@ -108,12 +121,17 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    //HARD DEPENDENCIES
-    implementation "curse.maven:curios-309927:6529130"
-    implementation "curse.maven:cybernetics-1430192:8536560"
+//HARD DEPENDENCIES
+    compileOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api"
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
 
-    //SOFT DEPENDENCIES
+    //implementation "curse.maven:cybernetics-1430192:8536560"
+    implementation "com.perigrine3.createcybernetics:createcybernetics:${cybernetics_version}"
+
+//SOFT DEPENDENCIES
     implementation "curse.maven:cybernetics-cyberchems-1520237:8435925"
+
+    implementation "curse.maven:jei-238222:8527020"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

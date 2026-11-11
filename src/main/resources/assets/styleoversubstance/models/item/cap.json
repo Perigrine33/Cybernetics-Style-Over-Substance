@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/cap",
+    "layer1": "styleoversubstance:item/cap_dye1",
+    "layer2": "styleoversubstance:item/cap_dye2"
+  }
+}

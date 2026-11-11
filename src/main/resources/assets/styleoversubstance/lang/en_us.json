@@ -1,3 +1,95 @@
 {
-  "creativetab.styleoversubstance.style_over_substance_tab": "Cybernetics: Style Over Substance"
+  "creativetab.styleoversubstance.style_over_substance_items_tab": "SOS: Items & Blocks",
+  "creativetab.styleoversubstance.style_over_substance_tab": "SOS: Clothes",
+
+  "jei.styleoversubstance.garment_table": "Tailoring Table Recipes",
+
+  "container.styleoversubstance.garment_table": "Tailoring Table",
+
+  "block.styleoversubstance.garment_table": "Tailoring Table",
+
+  "item.styleoversubstance.basic_fabric": "Basic Fabric",
+  "item.styleoversubstance.leather_fabric": "Leather Fabric",
+  "item.styleoversubstance.synthweave_fabric": "Synthweave Fabric",
+
+  "item.styleoversubstance.module_leds": "LED Strip",
+  "item.styleoversubstance.module_battery": "Battery Pack",
+  "item.styleoversubstance.module_armoredplating": "Armored Plating",
+  "item.styleoversubstance.module_fireproofgel": "Flame Retardant Gel",
+  "item.styleoversubstance.module_faradaythreading": "Faraday Threading",
+
+  "tooltip.styleoversubstance.clothing_module": "§aCLOTHING MODULE",
+
+
+  "item.styleoversubstance.balaclava": "Balaclava",
+  "item.styleoversubstance.cap": "Cap",
+  "item.styleoversubstance.visor1": "Visor Glasses",
+  "item.styleoversubstance.glasses1": "Mirror Shades",
+  "item.styleoversubstance.glasses2": "Round Mirror Shades",
+  "item.styleoversubstance.monovisor": "Monovisor",
+  "item.styleoversubstance.gm08": "GM08 Helmet",
+  "item.styleoversubstance.tb3": "TB3 Helmet",
+  "item.styleoversubstance.maxtac_helmet": "MaxTac Tactical Helmet",
+  "item.styleoversubstance.trauma_team_helmet": "Trauma Team Helmet",
+  "item.styleoversubstance.oni_mask": "Oni Mask",
+
+  "item.styleoversubstance.leather_jacket1": "Leather Jacket 1",
+  "item.styleoversubstance.emt_jacket": "EMT Jacket",
+  "item.styleoversubstance.high_cropped_leather_jacket": "High Cropped Leather Jacket",
+  "item.styleoversubstance.labcoat1": "Stylish Labcoat",
+  "item.styleoversubstance.labcoat2": "Labcoat",
+  "item.styleoversubstance.baggy_sweatshirt": "Baggy Sweatshirt",
+
+  "item.styleoversubstance.netrunning_bodysuit": "Netrunning Bodysuit",
+  "item.styleoversubstance.netrunning_unitard": "Netrunning Unitard & Leggings",
+  "item.styleoversubstance.maxtac_bodysuit": "MaxTac Tactical Suit",
+  "item.styleoversubstance.trauma_team_padded_armor": "Trauma Team Padded Armor",
+
+  "item.styleoversubstance.messy_tie": "Loose Necktie",
+  "item.styleoversubstance.tie": "Necktie",
+
+  "item.styleoversubstance.camo_pants": "Camo Pants",
+
+
+
+
+
+
+
+
+  "item.styleoversubstance.skinupgrades_plasticcasing": "Plastic Casing",
+  "tooltip.styleoversubstance.skinupgrades_plasticcasing.tooltip1": "§7Hides §9Cyberlimbs§r and provides a glossy effect",
+  "item.styleoversubstance.skinupgrades_techhair": "TechHair",
+  "tooltip.styleoversubstance.skinupgrades_techhair.tooltip1": "§7Allows the user to access a hairstyle menu to change hairstyles and colors on the fly",
+  "item.styleoversubstance.skinupgrades_skinwatch": "SkinWatch",
+  "tooltip.styleoversubstance.skinupgrades_skinwatch.tooltip1": "§7Displays a light clock display on the player arm",
+  "tooltip.styleoversubstance.skinupgrades_skinwatch.tooltip2": "§7Requires §cSkin§r or §9SynthSkin",
+  "item.styleoversubstance.skinupgrades_chemskin": "ChemSkin",
+  "tooltip.styleoversubstance.skinupgrades_chemskin.tooltip1": "§7Allows the user to color shift their skin",
+  "tooltip.styleoversubstance.skinupgrades_chemskin.tooltip2": "§7Rplaces §cSkin",
+
+
+
+
+
+  "item.styleoversubstance.scavenged_plasticcasing": "Plastic Casing",
+  "item.styleoversubstance.scavenged_techhair": "TechHair",
+  "item.styleoversubstance.scavenged_chemskin": "ChemSkin",
+  "item.styleoversubstance.scavenged_skinwatch": "SkinWatch",
+
+
+  "tooltip.styleoversubstance.garment_table.primary_dye": "Primary Dye Channel",
+  "tooltip.styleoversubstance.garment_table.secondary_dye": "Secondary Dye Channel",
+  "tooltip.styleoversubstance.garment_table.modifier": "Modifier Slot",
+  "tooltip.styleoversubstance.garment_table.thread": "Thread Slot",
+  "tooltip.styleoversubstance.module.leds": "Lighting module. Lighting effects are not implemented yet.",
+  "tooltip.styleoversubstance.module.battery": "+2,500 maximum Cybernetics energy per installed module.",
+  "tooltip.styleoversubstance.module.plating": "+2 armor and +2 armor toughness per installed module.",
+  "tooltip.styleoversubstance.module.gel": "+7% chance per installed module to negate fire damage. Does not negate lava damage.",
+  "tooltip.styleoversubstance.module.faraday": "+10% chance per installed module to prevent Cybernetics EMP.",
+  "tooltip.styleoversubstance.module.faraday_head": "In the head slot: also adds a 10% chance to block your outgoing quickhacks.",
+  "tooltip.styleoversubstance.module.worn_only": "Active only while the garment is worn in a Curios slot.",
+  "tooltip.styleoversubstance.module.installed": "Installed Modules:",
+  "tooltip.styleoversubstance.module.entry": "  %s x%s",
+  "message.styleoversubstance.faraday_interference": "Faraday Threading blocked your outgoing quickhack."
 }

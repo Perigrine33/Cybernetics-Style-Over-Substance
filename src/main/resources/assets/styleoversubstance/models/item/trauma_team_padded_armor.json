@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/trauma_team_padded_armor",
+    "layer1": "styleoversubstance:item/trauma_team_padded_armor_dye1",
+    "layer2": "styleoversubstance:item/trauma_team_padded_armor_dye2",
+    "layer3": "styleoversubstance:item/trauma_team_padded_armor_plate"
+  }
+}
