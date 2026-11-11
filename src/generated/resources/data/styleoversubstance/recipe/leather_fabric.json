@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "STT"
+  ],
+  "result": {
+    "count": 4,
+    "id": "styleoversubstance:leather_fabric"
+  }
+}

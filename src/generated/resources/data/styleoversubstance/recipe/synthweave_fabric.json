@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "createcybernetics:plastic_sheet"
+    }
+  },
+  "pattern": [
+    "STT"
+  ],
+  "result": {
+    "count": 4,
+    "id": "styleoversubstance:synthweave_fabric"
+  }
+}

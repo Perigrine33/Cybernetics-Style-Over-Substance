@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "createcybernetics:engineering_table"
+    },
+    "F": {
+      "item": "styleoversubstance:basic_fabric"
+    },
+    "S": {
+      "item": "minecraft:shears"
+    }
+  },
+  "pattern": [
+    " F ",
+    "FEF",
+    "SF "
+  ],
+  "result": {
+    "count": 4,
+    "id": "styleoversubstance:garment_table"
+  }
+}
