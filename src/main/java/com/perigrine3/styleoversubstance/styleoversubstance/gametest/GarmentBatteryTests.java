@@ -21,6 +21,7 @@ import java.util.List;
 
 @GameTestHolder(Styleoversubstance.MODID)
 @PrefixGameTestTemplate(false)
+@SuppressWarnings("unused") // GameTest discovers this class and its test methods through annotations.
 public final class GarmentBatteryTests {
     private static Player wearer(GameTestHelper helper) {
         Player player = helper.makeMockPlayer(GameType.SURVIVAL);
