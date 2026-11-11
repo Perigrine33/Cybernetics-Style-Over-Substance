@@ -1,0 +1,23 @@
+{
+  "type": "styleoversubstance:garment_table",
+  "accept_mirrored": true,
+  "key": {
+    "Y": {
+      "item": "styleoversubstance:basic_fabric"
+    },
+    "X": {
+      "item": "styleoversubstance:synthweave_fabric"
+    }
+  },
+  "pattern": [
+    "     ",
+    " XXX ",
+    " X X ",
+    " XXX ",
+    "  Y  "
+  ],
+  "result": {
+    "id": "styleoversubstance:balaclava",
+    "count": 1
+  }
+}

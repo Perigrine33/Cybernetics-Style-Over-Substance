@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/tie",
+    "layer1": "styleoversubstance:item/tie_dye1"
+  }
+}

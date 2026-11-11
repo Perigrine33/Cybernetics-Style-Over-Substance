@@ -1,0 +1,23 @@
+{
+  "type": "styleoversubstance:garment_table",
+  "accept_mirrored": true,
+  "key": {
+    "F": {
+      "item": "styleoversubstance:basic_fabric"
+    },
+    "L": {
+      "item": "styleoversubstance:leather_fabric"
+    }
+  },
+  "pattern": [
+    "     ",
+    "     ",
+    "FFF  ",
+    "F FLL",
+    "     "
+  ],
+  "result": {
+    "id": "styleoversubstance:cap",
+    "count": 1
+  }
+}

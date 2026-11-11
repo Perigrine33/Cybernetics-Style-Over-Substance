@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/leather_jacket1",
+    "layer1": "styleoversubstance:item/leather_jacket1_dye1",
+    "layer2": "styleoversubstance:item/leather_jacket1_dye2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/netrunning_unitard",
+    "layer1": "styleoversubstance:item/netrunning_unitard_dye1",
+    "layer2": "styleoversubstance:item/netrunning_unitard_dye2"
+  }
+}

@@ -39,5 +39,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModAdvancementProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModEntityTypeTagProvider(packOutput, lookupProvider, existingFileHelper));
+
+        event.getGenerator().addProvider(event.includeServer(), new ModCuriosDataProvider(event.getGenerator().getPackOutput(), event.getExistingFileHelper(), event.getLookupProvider()));
     }
 }

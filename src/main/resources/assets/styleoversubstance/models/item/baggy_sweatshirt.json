@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/baggy_sweatshirt",
+    "layer1": "styleoversubstance:item/baggy_sweatshirt_dye1",
+    "layer2": "styleoversubstance:item/baggy_sweatshirt_dye2"
+  }
+}

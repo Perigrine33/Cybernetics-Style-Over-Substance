@@ -26,7 +26,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
-        //dropSelf(ModBlocks.SURGERY_CHAMBER_BOTTOM.get());
+        dropSelf(ModBlocks.GARMENT_TABLE.get());
 
         //add(ModBlocks.SMOOTH_TITANIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SMOOTH_TITANIUM_SLAB.get()));
 

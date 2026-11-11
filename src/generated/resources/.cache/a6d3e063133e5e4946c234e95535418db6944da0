@@ -1,13 +1,20 @@
-// 1.21.1	2026-07-30T10:12:15.3409536	Tags for minecraft:item mod id styleoversubstance
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/back.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/bangle.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/belt.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/body.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/bundle.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/charm.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/feet.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/hands.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/head.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/necklace.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/quiver.json
-2cc332c7bf6159faa7538673fdbb463f7d48dd54 data/styleoversubstance/tags/item/ring.json
+// 1.21.1	2026-11-11T13:59:41.7303934	Tags for minecraft:item mod id styleoversubstance
+59770f3603dddaec4d2c7ed7b8ccdc993b0faeed data/createcybernetics/tags/item/cyberware_item.json
+608b340f9340f2f51af5fb93d7d6ca05fd011bee data/createcybernetics/tags/item/scavenged_cyberware.json
+59770f3603dddaec4d2c7ed7b8ccdc993b0faeed data/createcybernetics/tags/item/skin_items.json
+59770f3603dddaec4d2c7ed7b8ccdc993b0faeed data/createcybernetics/tags/item/skin_upgrades.json
+5980debe17e68d97c1df84472e38dc6707492b2a data/curios/tags/item/back.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/belt.json
+604330e597ec34bd565e965c2af787c1bb4bf53d data/curios/tags/item/body.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/bracelet.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/bundle.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/charm.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/feet.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/hands.json
+8e3e2e51d7c3d480ef7bcef479381bda89c6b066 data/curios/tags/item/head.json
+aa62003a631e208678d8af60f6df5b764bf375f0 data/curios/tags/item/necklace.json
+6fc68e5e374beac95d424ed5fa7bfa146841462b data/curios/tags/item/pants.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/quiver.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/curios/tags/item/ring.json
+5b0bc737c4404a2097b07b0a3d139c2b74769c84 data/styleoversubstance/tags/item/clothing_mods.json
+762fe6cbe700b8086b044cb5e1d60652bacd0131 data/styleoversubstance/tags/item/fabrics.json

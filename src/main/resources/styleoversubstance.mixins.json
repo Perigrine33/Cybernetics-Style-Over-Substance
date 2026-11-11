@@ -4,8 +4,13 @@
   "package": "com.perigrine3.styleoversubstance.styleoversubstance.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PlayerEnergyCapacityMixin",
+    "EntityEnergyCapacityMixin",
+    "GarmentBatteryChargingMixin",
+    "OutgoingQuickhackMixin"
   ],
   "client": [
+    "client.LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

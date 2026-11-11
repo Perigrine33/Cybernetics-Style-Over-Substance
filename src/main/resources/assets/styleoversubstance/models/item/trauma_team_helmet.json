@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/trauma_team_helmet",
+    "layer1": "styleoversubstance:item/trauma_team_helmet_dye1"
+  }
+}

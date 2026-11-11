@@ -1,6 +1,7 @@
 package com.perigrine3.styleoversubstance.styleoversubstance.datagen;
 
 import com.perigrine3.styleoversubstance.styleoversubstance.Styleoversubstance;
+import com.perigrine3.styleoversubstance.styleoversubstance.block.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -15,7 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //blockWithItem(ModBlocks.TITANIUMORE_BLOCK);
+        //blockWithItem(ModBlocks.GARMENT_TABLE);
 
         //stairsBlock(ModBlocks.SMOOTH_TITANIUM_STAIRS.get(), blockTexture(ModBlocks.SMOOTH_TITANIUM.get()));
         //slabBlock(ModBlocks.SMOOTH_TITANIUM_SLAB.get(), blockTexture(ModBlocks.SMOOTH_TITANIUM.get()), blockTexture(ModBlocks.SMOOTH_TITANIUM.get()));

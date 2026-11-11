@@ -1,1 +1,9 @@
-// 1.21.1	2026-07-30T10:12:15.3439532	Recipes
+// 1.21.1	2026-08-05T17:41:16.9277506	Recipes
+e15bda848d5e63118c1d9aca70ef8fa7d89e3d0a data/styleoversubstance/advancement/recipes/misc/basic_fabric.json
+977d96afc2bae6156643eee9a2cdc37c672f56c8 data/styleoversubstance/advancement/recipes/misc/garment_table.json
+513677875ced2ae99c405bb7ebeba173b3a0e8ad data/styleoversubstance/advancement/recipes/misc/leather_fabric.json
+33f6f4f6800cfc0fc8be50ef1dd7b312971da697 data/styleoversubstance/advancement/recipes/misc/synthweave_fabric.json
+804ae13c5671a0af92bef885e50f34cd32e62539 data/styleoversubstance/recipe/basic_fabric.json
+641bde46ecad933202efc276ef622b838514599f data/styleoversubstance/recipe/garment_table.json
+91b4f0eb9405fca271765ec96288455ae2f0b3cd data/styleoversubstance/recipe/leather_fabric.json
+6ee6e03ef4a5e92df59edafe4e41e070c1d594c3 data/styleoversubstance/recipe/synthweave_fabric.json

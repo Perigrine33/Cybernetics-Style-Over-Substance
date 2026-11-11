@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/maxtac_bodysuit",
+    "layer1": "styleoversubstance:item/maxtac_bodysuit_dye1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "styleoversubstance:item/glasses2",
+    "layer1": "styleoversubstance:item/glasses2_dye1"
+  }
+}

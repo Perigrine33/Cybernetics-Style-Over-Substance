@@ -2,7 +2,7 @@ package com.perigrine3.styleoversubstance.styleoversubstance.client.skin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.perigrine3.createcybernetics.CreateCybernetics;
+import com.perigrine3.styleoversubstance.styleoversubstance.Styleoversubstance;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.PlayerModel;
@@ -23,20 +23,16 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderArmEvent;
 
-@EventBusSubscriber(modid = CreateCybernetics.MODID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = Styleoversubstance.MODID, value = Dist.CLIENT)
 public final class SkinHighlightRender {
 
     private SkinHighlightRender() {}
 
-    public static void apply(SkinModifierState state, boolean enabled,
-                             ResourceLocation wide, ResourceLocation slim,
-                             int color, boolean emissive) {
+    public static void apply(SkinModifierState state, boolean enabled, ResourceLocation wide, ResourceLocation slim, int color, boolean emissive) {
         apply(state, enabled, wide, slim, color, emissive, false);
     }
 
-    public static void apply(SkinModifierState state, boolean enabled,
-                             ResourceLocation wide, ResourceLocation slim,
-                             int color, boolean emissive, boolean tintOnEmissive) {
+    public static void apply(SkinModifierState state, boolean enabled, ResourceLocation wide, ResourceLocation slim, int color, boolean emissive, boolean tintOnEmissive) {
         if (state == null) return;
 
         if (!enabled) {
@@ -55,8 +51,8 @@ public final class SkinHighlightRender {
         SkinModifierState state = SkinModifierManager.getPlayerSkinState(player);
         if (state == null || !state.hasHighlights()) return;
 
-        Minecraft mc = Minecraft.getInstance();
-        EntityRenderer<? super AbstractClientPlayer> renderer = mc.getEntityRenderDispatcher().getRenderer(player);
+        Minecraft minecraft = Minecraft.getInstance();
+        EntityRenderer<? super AbstractClientPlayer> renderer = minecraft.getEntityRenderDispatcher().getRenderer(player);
         if (!(renderer instanceof PlayerRenderer playerRenderer)) return;
 
         HumanoidArm arm = event.getArm();
@@ -71,21 +67,22 @@ public final class SkinHighlightRender {
         boolean hideSleeve = shouldHideSleeve(state, arm);
         boolean renderSleeve = sleeveEnabled && !hideSleeve;
 
-        var prevRightPose = model.rightArmPose;
-        var prevLeftPose = model.leftArmPose;
-        boolean prevCrouching = model.crouching;
-        float prevSwimAmount = model.swimAmount;
-        float prevAttackTime = model.attackTime;
+        var previousRightPose = model.rightArmPose;
+        var previousLeftPose = model.leftArmPose;
+        boolean previousCrouching = model.crouching;
+        float previousSwimAmount = model.swimAmount;
+        float previousAttackTime = model.attackTime;
 
-        boolean prevRightArmVis = model.rightArm.visible;
-        boolean prevLeftArmVis = model.leftArm.visible;
-        boolean prevRightSleeveVis = model.rightSleeve.visible;
-        boolean prevLeftSleeveVis = model.leftSleeve.visible;
+        boolean previousRightArmVisible = model.rightArm.visible;
+        boolean previousLeftArmVisible = model.leftArm.visible;
+        boolean previousRightSleeveVisible = model.rightSleeve.visible;
+        boolean previousLeftSleeveVisible = model.leftSleeve.visible;
 
         PoseStack poseStack = event.getPoseStack();
         MultiBufferSource buffer = event.getMultiBufferSource();
 
         poseStack.pushPose();
+
         try {
             model.attackTime = 0.0F;
             model.crouching = false;
@@ -107,9 +104,9 @@ public final class SkinHighlightRender {
             for (SkinHighlight highlight : state.getHighlights()) {
                 if (highlight == null) continue;
 
-                ResourceLocation tex = highlight.getTexture(modelType);
+                ResourceLocation texture = highlight.getTexture(modelType);
 
-                RenderType rt;
+                RenderType renderType;
                 int light;
                 int color;
 
@@ -117,53 +114,49 @@ public final class SkinHighlightRender {
                     light = 0x00F000F0;
 
                     if (highlight.tintOnEmissive()) {
-                        rt = SkinRenderTypes.emissiveTinted(tex);
+                        renderType = SkinRenderTypes.emissiveTinted(texture);
                         color = highlight.getColor();
                     } else {
-                        rt = RenderType.entityTranslucent(tex);
+                        renderType = RenderType.entityTranslucent(texture);
                         color = 0xFFFFFFFF;
                     }
                 } else {
                     light = event.getPackedLight();
-                    rt = RenderType.entityTranslucent(tex);
+                    renderType = RenderType.entityTranslucent(texture);
                     color = highlight.getColor();
                 }
 
-                var vc = buffer.getBuffer(rt);
-                armPart.render(poseStack, vc, light, OverlayTexture.NO_OVERLAY, color);
+                var vertexConsumer = buffer.getBuffer(renderType);
+                armPart.render(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, color);
 
                 if (renderSleeve) {
-                    sleevePart.render(poseStack, vc, light, OverlayTexture.NO_OVERLAY, color);
+                    sleevePart.render(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, color);
                 }
             }
         } finally {
             RenderSystem.defaultBlendFunc();
             RenderSystem.disableBlend();
 
-            model.rightArmPose = prevRightPose;
-            model.leftArmPose = prevLeftPose;
-            model.crouching = prevCrouching;
-            model.swimAmount = prevSwimAmount;
-            model.attackTime = prevAttackTime;
+            model.rightArmPose = previousRightPose;
+            model.leftArmPose = previousLeftPose;
+            model.crouching = previousCrouching;
+            model.swimAmount = previousSwimAmount;
+            model.attackTime = previousAttackTime;
 
-            model.rightArm.visible = prevRightArmVis;
-            model.leftArm.visible = prevLeftArmVis;
-            model.rightSleeve.visible = prevRightSleeveVis;
-            model.leftSleeve.visible = prevLeftSleeveVis;
+            model.rightArm.visible = previousRightArmVisible;
+            model.leftArm.visible = previousLeftArmVisible;
+            model.rightSleeve.visible = previousRightSleeveVisible;
+            model.leftSleeve.visible = previousLeftSleeveVisible;
 
             poseStack.popPose();
         }
     }
 
     private static boolean isSleeveEnabled(AbstractClientPlayer player, HumanoidArm arm) {
-        return arm == HumanoidArm.RIGHT
-                ? SkinVanillaWearVisibility.isModelPartShownNow(player, PlayerModelPart.RIGHT_SLEEVE)
-                : SkinVanillaWearVisibility.isModelPartShownNow(player, PlayerModelPart.LEFT_SLEEVE);
+        return arm == HumanoidArm.RIGHT ? SkinVanillaWearVisibility.isModelPartShownNow(player, PlayerModelPart.RIGHT_SLEEVE) : SkinVanillaWearVisibility.isModelPartShownNow(player, PlayerModelPart.LEFT_SLEEVE);
     }
 
     private static boolean shouldHideSleeve(SkinModifierState state, HumanoidArm arm) {
-        return arm == HumanoidArm.RIGHT
-                ? state.getHideMask().contains(SkinModifier.HideVanilla.RIGHT_SLEEVE)
-                : state.getHideMask().contains(SkinModifier.HideVanilla.LEFT_SLEEVE);
+        return arm == HumanoidArm.RIGHT ? state.getHideMask().contains(SkinModifier.HideVanilla.RIGHT_SLEEVE) : state.getHideMask().contains(SkinModifier.HideVanilla.LEFT_SLEEVE);
     }
 }
